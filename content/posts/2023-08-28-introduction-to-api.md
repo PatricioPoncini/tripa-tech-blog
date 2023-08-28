@@ -14,6 +14,8 @@ image: "https://miro.medium.com/v2/resize:fit:1400/1*DI5wwLcQV-b3erfLIbvfFQ.jpeg
 ## ¿Qué es un CRUD?
 CRUD es un término que se usa en informática y es el acrónimo de "**C**reate - **R**ead - **U**pdate - **D**elete". Es una abreviatura y un concepto que se utiliza para englobar las operaciones básicas que se pueden hacer interactuando con una base de datos (generalmente más utilizado en bases de datos SQL).
 
+Se resume en que son las operaciones que puede hacer un usuario para interactuar con el servidor, desde su interfaz de cliente.
+
 ## ¿Para qué sirve?
 El uso de CRUD lo dice la palabra, es para poder crear, leer, actualizar o eliminar registros de una base de datos.
 
@@ -37,15 +39,17 @@ Tiene métodos que son para usar junto con CRUD, aquí hay 4 métodos que son de
 
 [Todos los métodos HTTP ➜](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
 
-*Por ejemplo:* Al crear una REST API, utilizaríamos CRUD para poder crear un usuario. Para esto utilizaríamos el método POST del protocolo HTTP para poder hacer una solicitud POST desde el cliente al servidor, con la información del usuario que se quiere crear (**C**reate). El servidor procesa esta información, crea el usuario y lo guarda en la base de datos.
+*Por ejemplo:* Al crear una REST API, utilizaríamos CRUD para poder crear un usuario. Para esto utilizaríamos el método POST del protocolo HTTP para poder hacer una solicitud POST desde el cliente al servidor, con la información del usuario que se quiere crear (Create). El servidor procesa esta información, crea el usuario y lo guarda en la base de datos.
 
-En ese caso, hicimos uso del método POST del protocolo HTTP, usando CRUD e interactuando con una REST API.
+En ese caso, hicimos uso del método POST del protocolo HTTP interactuando con una REST API.
 
 Hoy en día hay un stándar que es HTTPS, básicamente es HTTP pero más seguro. Y es algo prácticamente obligatorio en cualquier página hoy en día, ya que brinda confiabilidad a los usuarios al tener un protocolo seguro.
 
 La diferencia que tiene con HTTP es que HTTPS está protegido contra intervención de terceros que quieran ver el intercambio de información. Estos datos en HTTPS van cifrados entre el *cliente-servidor*.
 
 ## ¿Qué es una API y como funciona?
+Las siglas pertenecen a *"Application Programming Interface"*
+
 Es código que permite que diferentes aplicaciones se comuniquen entre sí. Es un intermediario entre 2 sistemas, permite intercambiar datos del punto A al punto B, tanto para leer o transferir información.
 
 ![API](https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_full_width/private/API-page-graphic.png?itok=RRsvST-_)
@@ -58,7 +62,7 @@ Cuando desarrollamos una API disponibilizamos endpoints para que los usuarios pu
 
 Asímismo, en las APIs no solo hay métodos HTTP entre cliente-servidor en el momento. Podríamos desarrollar una función para que cuando el comprador realice una compra, el backend tome el email con el que la persona se registró y le mande un correo automáticamente al comprador indicandole que su compra fue exitosa.
 
-El vendedor no podría (al menos con su cuenta de rol "Vendedor") realizar una compra, pero sí podría hacer una solicitud *GET* para ver cuales fueron los productos más vendidos del mes, o una solicitud *POST* para agregar un nuevo producto con stock que quiere implementar.
+El vendedor no podría (al menos con su cuenta de rol "Vendedor") realizar una compra, pero sí podría hacer una solicitud *GET* para ver cuales fueron los productos más vendidos del mes, o una solicitud *POST* para agregar un nuevo producto con stock que quiere ofrecer al público.
 
 Osea, cada uno tiene endpoints a los que puede acceder y endpoints a los que no. Esto la API lo maneja "dejando pasar o no" a la persona, dependiendo del rol. 
 
@@ -74,6 +78,10 @@ https://www.stock-inventory.com/products
 https://www.stock-inventory.com/sales-month
 ```
 
-Como adicional, la seguridad de la API depende exclusivamente de quien la desarrolla, ya que el developer puede dedicarle tiempo para crear un sistema robusto o hacer lo mínimo, teniendo que atenerse a las consecuencias en caso de que intente ser vulnerada.
+Pero cuidado, una API no solo se usa para interactuar con usuarios, sino que tambien hay APIs que son para interactuar con otras APIs, se comunican entre ellas. Si nosotros quisiéramos hacer una REST API como proyecto y quisieramos mostrar el clima, lo que haríamos sería interactuar mediante una petición HTTP a una API de clima, que nos traiga esa información, y una vez la tengamos, nuestra API la muestra al usuario.
+
+Otro ejemplo sería si tuvieramos una API con la que el usuario se puede loggear por usuario y contraseña o mediante una plataforma del gobierno de su país que valide su identidad. Si eligiera la opción de validar su identidad mediante una plataforma de un ente gubernamental, el backend (nuestra API) lo que haría sería consultarle a la API de este organismo si esta persona existe. Si la respuesta es positiva, tomaría los datos que le brinda este organismo acerca de la persona y directamente le crearía el usuario, algo que le facilita a la persona el hecho de estar escribiendo todos sus datos en los campos.
+
+Como adicional y hablando sobre la seguridad, esta depende de la API depende exclusivamente de quien la desarrolla, ya que el developer puede dedicarle tiempo para crear un sistema robusto o hacer lo mínimo, teniendo que atenerse a las consecuencias en caso de que intente ser vulnerada.
 
 Para comenzar con seguridad en APIs, un buen tema a tratar son los [JWT (JsonWebTokens)](https://openwebinars.net/blog/que-es-json-web-token-y-como-funciona/)

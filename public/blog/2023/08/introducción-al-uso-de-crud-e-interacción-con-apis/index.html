@@ -85,6 +85,7 @@ Introducción al uso de CRUD e interacción con APIs
 <div class=prose>
 <h2 id=qué-es-un-crud>¿Qué es un CRUD?</h2>
 <p>CRUD es un término que se usa en informática y es el acrónimo de &ldquo;<strong>C</strong>reate - <strong>R</strong>ead - <strong>U</strong>pdate - <strong>D</strong>elete&rdquo;. Es una abreviatura y un concepto que se utiliza para englobar las operaciones básicas que se pueden hacer interactuando con una base de datos (generalmente más utilizado en bases de datos SQL).</p>
+<p>Se resume en que son las operaciones que puede hacer un usuario para interactuar con el servidor, desde su interfaz de cliente.</p>
 <h2 id=para-qué-sirve>¿Para qué sirve?</h2>
 <p>El uso de CRUD lo dice la palabra, es para poder crear, leer, actualizar o eliminar registros de una base de datos.</p>
 <p><em>Por ejemplo:</em> Para crear un sistema de gestión de stock para inventariar productos, al construir la API utilizaríamos un CRUD ya que necesitaríamos poder crear productos para tener en stock, leerlos para saber cuantos tenemos, actualizarlos por si surge algún cambio, y eliminarlos cuando decidamos no vender más un producto.</p>
@@ -101,18 +102,19 @@ Introducción al uso de CRUD e interacción con APIs
 <li>Método <strong>DELETE</strong>: Elimina información</li>
 </ul>
 <p><a href=https://developer.mozilla.org/es/docs/Web/HTTP/Methods>Todos los métodos HTTP ➜</a></p>
-<p><em>Por ejemplo:</em> Al crear una REST API, utilizaríamos CRUD para poder crear un usuario. Para esto utilizaríamos el método POST del protocolo HTTP para poder hacer una solicitud POST desde el cliente al servidor, con la información del usuario que se quiere crear (<strong>C</strong>reate). El servidor procesa esta información, crea el usuario y lo guarda en la base de datos.</p>
-<p>En ese caso, hicimos uso del método POST del protocolo HTTP, usando CRUD e interactuando con una REST API.</p>
+<p><em>Por ejemplo:</em> Al crear una REST API, utilizaríamos CRUD para poder crear un usuario. Para esto utilizaríamos el método POST del protocolo HTTP para poder hacer una solicitud POST desde el cliente al servidor, con la información del usuario que se quiere crear (Create). El servidor procesa esta información, crea el usuario y lo guarda en la base de datos.</p>
+<p>En ese caso, hicimos uso del método POST del protocolo HTTP interactuando con una REST API.</p>
 <p>Hoy en día hay un stándar que es HTTPS, básicamente es HTTP pero más seguro. Y es algo prácticamente obligatorio en cualquier página hoy en día, ya que brinda confiabilidad a los usuarios al tener un protocolo seguro.</p>
 <p>La diferencia que tiene con HTTP es que HTTPS está protegido contra intervención de terceros que quieran ver el intercambio de información. Estos datos en HTTPS van cifrados entre el <em>cliente-servidor</em>.</p>
 <h2 id=qué-es-una-api-y-como-funciona>¿Qué es una API y como funciona?</h2>
+<p>Las siglas pertenecen a <em>&ldquo;Application Programming Interface&rdquo;</em></p>
 <p>Es código que permite que diferentes aplicaciones se comuniquen entre sí. Es un intermediario entre 2 sistemas, permite intercambiar datos del punto A al punto B, tanto para leer o transferir información.</p>
 <p><img src="https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_full_width/private/API-page-graphic.png?itok=RRsvST-_" alt=API></p>
 <p>En el ejemplo que dimos antes de un sistema de control de stock de inventariado, podríamos desarrollar una API para esto.</p>
 <p>Definamos 2 roles, un rol es <strong>&ldquo;Comprador&rdquo;</strong> y otro es <strong>&ldquo;Vendedor&rdquo;</strong>.</p>
 <p>Cuando desarrollamos una API disponibilizamos endpoints para que los usuarios puedan acceder a las funcionalidades que le brindamos. Tomando los roles de antes, un comprador tendría acceso a la tienda, donde podría hacer una solicitud <em>GET</em> para ver todos los productos que hay en stock, y otra solicitud <em>POST</em> para registrar una venta (por ejemplo, le diríamos a la API que registre una venta y baje en 1 el stock de &ldquo;Notebook Lenovo Thinkpad L15&rdquo; ya que el comprador adquirió una).</p>
 <p>Asímismo, en las APIs no solo hay métodos HTTP entre cliente-servidor en el momento. Podríamos desarrollar una función para que cuando el comprador realice una compra, el backend tome el email con el que la persona se registró y le mande un correo automáticamente al comprador indicandole que su compra fue exitosa.</p>
-<p>El vendedor no podría (al menos con su cuenta de rol &ldquo;Vendedor&rdquo;) realizar una compra, pero sí podría hacer una solicitud <em>GET</em> para ver cuales fueron los productos más vendidos del mes, o una solicitud <em>POST</em> para agregar un nuevo producto con stock que quiere implementar.</p>
+<p>El vendedor no podría (al menos con su cuenta de rol &ldquo;Vendedor&rdquo;) realizar una compra, pero sí podría hacer una solicitud <em>GET</em> para ver cuales fueron los productos más vendidos del mes, o una solicitud <em>POST</em> para agregar un nuevo producto con stock que quiere ofrecer al público.</p>
 <p>Osea, cada uno tiene endpoints a los que puede acceder y endpoints a los que no. Esto la API lo maneja &ldquo;dejando pasar o no&rdquo; a la persona, dependiendo del rol.</p>
 <p><strong>Endpoint de ejemplo para ver los productos en stock:</strong></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// GET
@@ -120,7 +122,9 @@ Introducción al uso de CRUD e interacción con APIs
 </span></code></pre></div><p><strong>Endpoint de ejemplo para ver las ventas del mes:</strong></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// GET
 </span><span class=c1></span><span class=nx>https</span><span class=o>:</span><span class=c1>//www.stock-inventory.com/sales-month
-</span></code></pre></div><p>Como adicional, la seguridad de la API depende exclusivamente de quien la desarrolla, ya que el developer puede dedicarle tiempo para crear un sistema robusto o hacer lo mínimo, teniendo que atenerse a las consecuencias en caso de que intente ser vulnerada.</p>
+</span></code></pre></div><p>Pero cuidado, una API no solo se usa para interactuar con usuarios, sino que tambien hay APIs que son para interactuar con otras APIs, se comunican entre ellas. Si nosotros quisiéramos hacer una REST API como proyecto y quisieramos mostrar el clima, lo que haríamos sería interactuar mediante una petición HTTP a una API de clima, que nos traiga esa información, y una vez la tengamos, nuestra API la muestra al usuario.</p>
+<p>Otro ejemplo sería si tuvieramos una API con la que el usuario se puede loggear por usuario y contraseña o mediante una plataforma del gobierno de su país que valide su identidad. Si eligiera la opción de validar su identidad mediante una plataforma de un ente gubernamental, el backend (nuestra API) lo que haría sería consultarle a la API de este organismo si esta persona existe. Si la respuesta es positiva, tomaría los datos que le brinda este organismo acerca de la persona y directamente le crearía el usuario, algo que le facilita a la persona el hecho de estar escribiendo todos sus datos en los campos.</p>
+<p>Como adicional y hablando sobre la seguridad, esta depende de la API depende exclusivamente de quien la desarrolla, ya que el developer puede dedicarle tiempo para crear un sistema robusto o hacer lo mínimo, teniendo que atenerse a las consecuencias en caso de que intente ser vulnerada.</p>
 <p>Para comenzar con seguridad en APIs, un buen tema a tratar son los <a href=https://openwebinars.net/blog/que-es-json-web-token-y-como-funciona/>JWT (JsonWebTokens)</a></p>
 </div>
 </div>
