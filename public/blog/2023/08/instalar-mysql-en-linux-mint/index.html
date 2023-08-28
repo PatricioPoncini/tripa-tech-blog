@@ -91,9 +91,6 @@ Instalar MySQL en Linux Mint
 <p>GNU Bash o simplemente Bash es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting</p>
 </blockquote>
 <p><img src="https://i.insider.com/542451726da811d27b0a4127?width=1000&format=jpeg&auto=webp" alt=bash></p>
-<blockquote>
-<p>To write using an easy-to-read and easy-to-write plain text format</p>
-</blockquote>
 <p>Teniendo esto en claro, vamos a comenzar a trabajar.</p>
 <h3 id=instalación-de-mysql>Instalación de MySQL</h3>
 <p>Vamos a proceder con el primer comando:</p>
@@ -110,7 +107,8 @@ Do you want to continue? [Y/n]</p>
 <blockquote>
 <p>mysql Ver 8.0.34-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))</p>
 </blockquote>
-<p>¡La instalación fue exitosa!</p>
+<p>Cabe aclarar que apenas se instala MySQL el servicio está corriendo por defecto, por lo que ya estará iniciado y no tendrás que hacer ningún proceso adicional para levantarlo.</p>
+<p>¡Si pudiste ver la versión, la instalación fue exitosa!</p>
 <h2 id=usar-mysql-en-bash>Usar MySQL en bash</h2>
 <p>Una vez tengamos hecho esto, si somos usuarios root podremos usar ya MySQL. Utilizando el siguiente comando vamos a poder acceder:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo mysql
@@ -125,11 +123,28 @@ Do you want to continue? [Y/n]</p>
 <span class=p>|</span> information_schema <span class=p>|</span>
 <span class=p>|</span> mysql              <span class=p>|</span>
 <span class=p>|</span> performance_schema <span class=p>|</span>
-<span class=p>|</span> stockmaster        <span class=p>|</span>
 <span class=p>|</span> sys                <span class=p>|</span>
 +--------------------+
+<span class=m>4</span> rows in <span class=nb>set</span> <span class=o>(</span>0,00 sec<span class=o>)</span>
+</code></pre></div><p>Si quisieramos crear una base de datos nueva, tendríamos que usar el comando</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>CREATE DATABASE nombre_base_de_datos<span class=p>;</span>
+</code></pre></div><p>Y una vez hecho esto, si volvieramos a usar el comando para ver las bases de datos, observaríamos esto</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>mysql&gt; CREATE DATABASE tripa_tech<span class=p>;</span>
+Query OK, <span class=m>1</span> row affected <span class=o>(</span>0,02 sec<span class=o>)</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>mysql&gt; SHOW DATABASES<span class=p>;</span>
++--------------------+
+<span class=p>|</span> Database           <span class=p>|</span>
++--------------------+
+<span class=p>|</span> information_schema <span class=p>|</span>
+<span class=p>|</span> mysql              <span class=p>|</span>
+<span class=p>|</span> performance_schema <span class=p>|</span>
+<span class=p>|</span> sys                <span class=p>|</span>
+<span class=p>|</span> tripa_tech         <span class=p>|</span>
++--------------------+
 <span class=m>5</span> rows in <span class=nb>set</span> <span class=o>(</span>0,00 sec<span class=o>)</span>
-</code></pre></div>
+</code></pre></div><p>Y listo, así tendríamos MySQL instalado en nuestro Linux Mint con nuestra primer base de datos creada y lista para poder trabajar con ella.</p>
+<p>Te recomiendo leer la documentación acerca de las queries de MySQL para que sepas como poder manejar registros en la base de datos, para poder leer, actualizar, borrar o insertar datos.</p>
+<p><a href=https://dev.mysql.com/doc/refman/8.0/en/select.html>Documentación MySQL ➜</a></p>
 </div>
 </div>
 </div>
