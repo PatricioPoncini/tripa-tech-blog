@@ -7,7 +7,7 @@ author:
 categories: ["MySQL", "Linux"]
 tags: ["Writing"]
 description: Aprender a instalar MySQL utilizando bash en Linux Mint
-thumbnail: "https://datascientest.com/es/wp-content/uploads/sites/7/2022/12/mySQL_blog_4-106.webp"
+thumbnail: "/images/mysql_install_banner.jpg"
 image: "https://blog.trescomatres.com/wp-content/uploads/2017/03/banner-mysql.jpg"
 ---
 
