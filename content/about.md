@@ -2,7 +2,7 @@
 title: "Sobre mí"
 permalink: "/about/"
 description: "Un poco de <strong>quién está detrás</strong> de Tripa Tech Blog"
-image: "/images/about_me_img.jpg"
+image: "/images/about_me.jpg"
 ---
 
 # ¡Hola!
@@ -17,7 +17,7 @@ Pero tranquilo, no va a ser todo serio. Me gustan tanto los blogs de guías como
 
 Actualmente estoy estudiando la Tecnicatura Universitaria en Programación en la UTN de mi ciudad. Una carrera que me enseñó muchas bases en programación que no pude aprender en secundaria debido a que no asistí a un secundario técnico.
 
-En paralelo, estoy trabajando en una consultora llevando acabo un proyecto fascinante. Entré el 27 de octubre de 2023 y sigo hasta el día de hoy allí, y desde ese momento mi responsabilidad ha sido desarrollar un backend para un software de oficina virtual. ¿El objetivo? poder conectar a clientes y agentes de una forma mucho más sencilla y comunicativa. Comencé sabiendo muy poco dado que fue mi primera experiencia en el mundo laboral, pero hoy en día puedo decir que crecí muchísimo y pude llevar mis habilidades a otro nivel. 
+En paralelo, estoy trabajando en una consultora llevando acabo un proyecto fascinante. Entré el 27 de octubre de 2022 y sigo hasta el día de hoy allí, y desde ese momento mi responsabilidad ha sido desarrollar un backend para un software de oficina virtual. ¿El objetivo? poder conectar a clientes y agentes de una forma mucho más sencilla y comunicativa. Comencé sabiendo muy poco dado que fue mi primera experiencia en el mundo laboral, pero hoy en día puedo decir que crecí muchísimo y pude llevar mis habilidades a otro nivel. 
 
 En este proyecto las principales tecnologías son Typescript, Express.js, MySQL y TypeORM. Pero además pude tocar temas muy interesantes como cronjobs, envío de emails automáticos, autenticación con jsonwebtokens, recopilación de datos para reportes, entre otros. Por lo que puedo decir que aprendí mucho en este tiempo que llevo trabajando como desarrollador backend.
 

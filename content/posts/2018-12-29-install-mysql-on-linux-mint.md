@@ -97,4 +97,6 @@ Y listo, así tendríamos MySQL instalado en nuestro Linux Mint con nuestra prim
 
 Te recomiendo leer la documentación acerca de las queries de MySQL para que sepas como poder manejar registros en la base de datos, para poder leer, actualizar, borrar o insertar datos. 
 
-[Documentación MySQL ➜](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+[Documentación "Reference Manual " MySQL 8.0 ➜](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+[Documentación "MySQL Shell 8.0"](https://dev.mysql.com/doc/mysql-shell/8.0/en/)
