@@ -14,7 +14,6 @@
       "header",
       "html",
       "img",
-      "li",
       "link",
       "main",
       "meta",
@@ -25,8 +24,7 @@
       "span",
       "strong",
       "svg",
-      "title",
-      "ul"
+      "title"
     ],
     "classes": [
       "-ml-4",
@@ -135,21 +133,14 @@
     ],
     "ids": [
       "a-qué-me-dedico",
-      "comandos",
-      "commonmark",
       "configuración-de-mysql",
       "cuál-es-mi-objetivo",
-      "github-flavored-markdown-gfm",
-      "history",
       "hola",
       "instalación-de-mysql",
-      "markdown-extra",
-      "markdown-flavours",
       "menu-close",
       "menu-container",
       "menu-trigger",
-      "primeros-pasos",
-      "syntax-highlighting"
+      "primeros-pasos"
     ]
   }
 }
