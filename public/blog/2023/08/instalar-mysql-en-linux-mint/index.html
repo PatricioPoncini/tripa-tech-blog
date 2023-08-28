@@ -111,8 +111,25 @@ Do you want to continue? [Y/n]</p>
 <p>mysql Ver 8.0.34-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))</p>
 </blockquote>
 <p>¡La instalación fue exitosa!</p>
-<h2 id=configuración-de-mysql>Configuración de MySQL</h2>
-<p>Ahora lo que haremos será configurar MySQL.</p>
+<h2 id=usar-mysql-en-bash>Usar MySQL en bash</h2>
+<p>Una vez tengamos hecho esto, si somos usuarios root podremos usar ya MySQL. Utilizando el siguiente comando vamos a poder acceder:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo mysql
+</code></pre></div><p>AL ejecutarlo, nos pedirá nuestra contraseña de usuario root (admin). Y luego ya podremos tener disponible para usar MySQL.</p>
+<p>Por ejemplo, ejecutando el siguiente comando:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>SHOW DATABASES<span class=p>;</span>
+</code></pre></div><p>Podremos saber cuales son las bases de datos que tenemos actualmente (aunque en este momento, solo veremos las que trae MySQL por defecto)</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>mysql&gt; SHOW DATABASES<span class=p>;</span>
++--------------------+
+<span class=p>|</span> Database           <span class=p>|</span>
++--------------------+
+<span class=p>|</span> information_schema <span class=p>|</span>
+<span class=p>|</span> mysql              <span class=p>|</span>
+<span class=p>|</span> performance_schema <span class=p>|</span>
+<span class=p>|</span> stockmaster        <span class=p>|</span>
+<span class=p>|</span> sys                <span class=p>|</span>
++--------------------+
+<span class=m>5</span> rows in <span class=nb>set</span> <span class=o>(</span>0,00 sec<span class=o>)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
