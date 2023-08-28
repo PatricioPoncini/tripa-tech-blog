@@ -6,7 +6,7 @@ author:
   image: images/author/author_img.jpg
 categories: ["MySQL", "Linux"]
 tags: ["Writing"]
-description: Aprender a instalar MySQL utilizando bash en Linux Mint
+description: Aprenderas a instalar MySQL en Linux Mint utilizando la bash. Además, crearás tu primera base de datos mediante comandos
 thumbnail: "/images/mysql_install_banner.jpg"
 image: "https://blog.trescomatres.com/wp-content/uploads/2017/03/banner-mysql.jpg"
 ---
@@ -99,4 +99,4 @@ Te recomiendo leer la documentación acerca de las queries de MySQL para que sep
 
 [Documentación "Reference Manual " MySQL 8.0 ➜](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
-[Documentación "MySQL Shell 8.0"](https://dev.mysql.com/doc/mysql-shell/8.0/en/)
+[Documentación "MySQL Shell 8.0" ➜](https://dev.mysql.com/doc/mysql-shell/8.0/en/)

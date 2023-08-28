@@ -6,6 +6,7 @@
       "body",
       "button",
       "div",
+      "em",
       "footer",
       "h1",
       "h2",
@@ -14,6 +15,7 @@
       "header",
       "html",
       "img",
+      "li",
       "link",
       "main",
       "meta",
@@ -24,7 +26,8 @@
       "span",
       "strong",
       "svg",
-      "title"
+      "title",
+      "ul"
     ],
     "classes": [
       "-ml-4",
@@ -139,7 +142,11 @@
       "menu-close",
       "menu-container",
       "menu-trigger",
+      "para-qué-sirve",
       "primeros-pasos",
+      "qué-es-el-protocolo-http",
+      "qué-es-un-crud",
+      "qué-es-una-api-y-como-funciona",
       "usar-mysql-en-bash"
     ]
   }
