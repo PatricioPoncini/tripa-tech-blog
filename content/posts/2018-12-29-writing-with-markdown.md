@@ -7,7 +7,7 @@ author:
 categories: ["MySQL", "Linux"]
 tags: ["Writing"]
 description: Aprender a instalar MySQL utilizando bash en Linux Mint
-thumbnail: "images/unsplash-CTivHyiTbFw-640x360.jpeg"
+thumbnail: "https://noviello.it/content/images/2019/03/mysql.jpg"
 image: "https://blog.trescomatres.com/wp-content/uploads/2017/03/banner-mysql.jpg"
 ---
 
@@ -47,6 +47,28 @@ Esto nos debería indicar que versión de MySQL tenemos instalada, lo que nos da
 
 ¡La instalación fue exitosa!
 
-## Configuración de MySQL
+## Usar MySQL en bash
+Una vez tengamos hecho esto, si somos usuarios root podremos usar ya MySQL. Utilizando el siguiente comando vamos a poder acceder:
+```bash
+sudo mysql
+```
+AL ejecutarlo, nos pedirá nuestra contraseña de usuario root (admin). Y luego ya podremos tener disponible para usar MySQL.
 
-Ahora lo que haremos será configurar MySQL.
+Por ejemplo, ejecutando el siguiente comando:
+```bash
+SHOW DATABASES;
+```
+Podremos saber cuales son las bases de datos que tenemos actualmente (aunque en este momento, solo veremos las que trae MySQL por defecto)
+```bash
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| stockmaster        |
+| sys                |
++--------------------+
+5 rows in set (0,00 sec)
+```

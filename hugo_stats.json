@@ -140,7 +140,8 @@
       "menu-close",
       "menu-container",
       "menu-trigger",
-      "primeros-pasos"
+      "primeros-pasos",
+      "usar-mysql-en-bash"
     ]
   }
 }
