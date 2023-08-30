@@ -11,6 +11,8 @@ Mi nombre es Patricio y soy de San Francisco, Córdoba, Argentina. Soy un desarr
 
 Este blog es un proyecto personal donde podrás ver posts que hago referidos a tecnología, en los cuales voy a dar lo mejor de mí en cuanto a investigación de los temas que se publiquen, para poder brindar información relevante y atractiva para vos.
 
+El nombre viene de mi apodo, el cuál es "Tripa" sumado a la palabra Tech.
+
 Pero tranquilo, no va a ser todo serio. Me gustan tanto los blogs de guías como los que son solo para informarse acerca de un tema de actualidad. Sin embargo, espero que tanto con temas serios como con publicaciones "livianas" de leer te puedas sentir a gusto aquí.
 
 ## ¿A qué me dedico?
