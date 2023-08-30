@@ -15,7 +15,7 @@ image: "https://mojoauth.com/blog/password-hashing-101-all-about-password-hashin
 
 Una función hash es un algoritmo matemático que transforma cualquier bloque de datos, en una nueva serie de caracteres y con una longitud fija. No importa el tamaño de la entrada, la salida siempre va a ser la misma (en el mismo tipo de hash).
 
-Una característica de las características de este tipo de algoritmos es que son unidireccionales, osea que no se puede revertir (o al menos es muy difícil) al texto original.
+Una de las características de este tipo de algoritmos es que son unidireccionales, osea que no se puede revertir (o al menos es muy difícil) al texto original.
 
 Ejemplo de hashear texto:
 
@@ -49,9 +49,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing
 
 Cambió la longitud, palabras, hay mayúsculas y encima espacios. Y así y todo, la longitud del hash es la misma que los otros 2 ejemplos.
 
-Este ejemplo está hecho con uno de los tipos más famosos de hash, el SHA-1. La familia de algoritmos hash SHA fue publicada por el Insituto Nacional de Estándares y Tecnología (NIST) como un estándar federal de procesamiento de información de EEUU. Hoy en día no se recomienda utilizar SHA-1 ya que no es tan seguro, se recomiendan tipos superiores como SHA-2(SHA-256 y SHA-512) y SHA-3.
+Este ejemplo está hecho con uno de los tipos más famosos de hash, el SHA-1. La familia de algoritmos hash [SHA](https://link.springer.com/referenceworkentry/10.1007/0-387-23483-7_388) fue publicada por el Insituto Nacional de Estándares y Tecnología ([NIST](https://www.nist.gov/)) como un estándar federal de procesamiento de información de EEUU. Hoy en día no se recomienda utilizar SHA-1 ya que no es tan seguro, se recomiendan tipos superiores como SHA-2(SHA-256 y SHA-512) y SHA-3.
 
-## ¿Pero para qué se utiliza el hash?
+## ¿Pero, para qué se utiliza el hash?
 
 Todo este "misterio" debe tener un porqué, un uso, un objetivo, cierto? Y la verdad es que sí, pero no solo para un solo uso, sino que tiene múltiples.
 
@@ -103,7 +103,7 @@ bcrypt.compare(userInputPassword, storedHashedPassword, (err, result) => {
 });
 ```
 
-## Antivirus y hash
+## Antivirus y hash de malware
 Los antivirus para poder reconocer los virus lo que hacen es obtener el hash de virus que ya existen, o de partes pequeñas y reconocibles de estos. Con estas firmas (o cadenas de hash) se arman listas de hash de malware. A estas listas se las llama Blocklist (HBL).
 
 Entonces los antivirus al detectar un hash en una PC que coincida con uno de los que tienen en su lista, saben que se puede tratar de un virus que ya conocen o al menos es un virus que comparte pedazos de código con un virus ya existente y detectado anteriormente.
@@ -117,14 +117,15 @@ También se pueden hashear archivos. Lo que se hace por ejemplo es que se crea e
 Si tomaramos ese hash y lo compararamos contra el que tenemos guardado en nuestra PC vamos a ver que son diferentes, porque hubo un cambio, y por más mínimo que sea el cambio fue hecho. Esto nos permite verificar que un documento no fue alterado, ya que si lo hasheamos, lo enviamos y cuando vuelve volvemos a realizar el hash y son iguales podemos concluir que no fue alterado. Ahora, si vuelve y el hash es diferente, significa que algo cambió en el documento.
 ![Hash de un archivo](https://web.uanataca.com/uploads/images/1/v/o/ocp-unicidad-del-hash-diferente-documento-nuevo-hash.png)
 
-Hay muchos otros casos de uso, como discográficas para hashear canciones, hashear datos de tarjetas en bases de datos, hashear y guardar información sensible de usuarios, firmas digitales, hasheo de tokens de usuarios, etc.
+Hay muchos otros casos de uso, como discográficas para hashear canciones, hashear datos de tarjetas en bases de datos, hashear y guardar información sensible de usuarios, firmas digitales, hasheo de tokens de usuarios, blockchain, etc.
 
 Como podes ver, hay muchos casos donde se hashean datos o bloques de información para que alguien no pueda obtenerlos ni llegar a ellos, y resulta muy útil para poder proteger estos datos ya que la única forma de violar este algoritmo matemático es con fuerza bruta o ataques de tabla arcoíris(intentan adivinar o precalcular hashes para encontrar coincidencias con la entrada original), pero así y todo hay maneras para aún asegurar más nuestros datos, aumentando el número de saltos del hash.
 
 
-### Fuentes que ayudaron a escribir el artículo
+### Fuentes que ayudaron a escribir este artículo
 - https://latam.kaspersky.com/blog/que-es-un-hash-y-como-funciona/2806/
 - https://academy.bit2me.com/sha256-algoritmo-bitcoin/
 - https://es.wikipedia.org/wiki/Secure_Hash_Algorithm
 - https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/
 - https://academy.bit2me.com/que-es-hash/
+- https://es.wikipedia.org/wiki/Funci%C3%B3n_hash
