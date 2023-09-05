@@ -59,11 +59,6 @@ paginate = 3
     weight = 1
 
 [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
-    weight = 2
-
-[[menu.main]]
     name = "Sobre mí"
     url = "/about/"
     weight = 3
