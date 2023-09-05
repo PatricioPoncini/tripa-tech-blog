@@ -81,6 +81,6 @@ export interface UsuarioInterface {
 
 Osea, toda la info que necesitamos sin tener que hacer la llamada a la API, cuando con Javascript tendriamos que haber llevado a cabo otros pasos.
 
-### Fuentes
+### Fuentes que se usaron para el artículo
 - [https://profile.es/blog/que-es-typescript-vs-javascript/](https://profile.es/blog/que-es-typescript-vs-javascript/)
 - [https://immune.institute/blog/typescript-que-es-como-se-diferencia-javascript/](https://immune.institute/blog/typescript-que-es-como-se-diferencia-javascript/)
