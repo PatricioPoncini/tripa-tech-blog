@@ -7,8 +7,8 @@ author:
 categories: ["Lenguajes", "Javascript", "Typescript"]
 tags: ["Writing"]
 description: "Diferencias y caracteristicas de 2 de los lenguajes más en auge."
-thumbnail: "https://user-images.githubusercontent.com/6702424/151054088-b21c1cd6-912a-4dcf-b54d-af74e8632620.png"
-image: "https://cdn-media-1.freecodecamp.org/images/oVVbTLR5gXHgP8Ehlz1qzRm5LLjX9kv2Zri6"
+thumbnail: "https://www.imaginarycloud.com/blog/content/images/2021/05/type-vs-javascript.png"
+image: "https://logica7web.es/wp-content/uploads/2022/05/Texto-mecanografiado-vs-JavaScript-Comprenda-la-diferencia-principal-en-detalle.jpg"
 ---
 
 ## Todos sabemos que es Javascript, pero ¿Qué es Typescript?
@@ -37,6 +37,15 @@ Por otro lado, los lenguajes de tipado estático se prestan a la implementación
 - Recomendación de qué tipo retorna una función
 - Auto documentación del código
 - Mejor análisis para detectar errores
+
+## ¿Qué es el tipado? ¿Y por qué lo usa Typescript?
+El tipado se refiere a cómo se declaran los tipos de variables. Estos pueden variar desde tipos simples como number y string hasta estructuras complejas.
+
+Puedes encontrar dos categorías en los lenguajes de programación: Tipado estático y tipado dinámico.
+
+En lenguajes con tipado estático, el tipo de variable se conoce en el tiempo de compilación, mientras que en lenguajes con tipado dinámico, el tipo de variable se conoce solamente cuando se ejecuta el programa.
+
+JavaScript no admite tipado estático. Typescript sí, y ese esa es su ventaja.
 
 ## Ventajas de utilizar Typescript
 
