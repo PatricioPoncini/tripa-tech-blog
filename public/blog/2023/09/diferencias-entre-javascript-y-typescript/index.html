@@ -8,12 +8,12 @@ Tripa Tech Blog</title>
 <link rel=icon href=/favicon-32x32.png>
 <link rel=preconnect href=https://fonts.gstatic.com>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap" rel=stylesheet>
-<meta name=description content="Diferencias y caracteristicas de 2 de los lenguajes más en auge.">
+<meta name=description content="Diferencias y caracteristicas de 2 de los lenguajes que más están en auge.">
 <meta property="og:title" content="Diferencias entre Javascript y Typescript">
 <meta property="og:type" content="website">
 <meta property="og:url" content="/blog/2023/09/diferencias-entre-javascript-y-typescript/">
-<meta property="og:image" content="https://logica7web.es/wp-content/uploads/2022/05/Texto-mecanografiado-vs-JavaScript-Comprenda-la-diferencia-principal-en-detalle.jpg">
-<meta property="og:description" content="Diferencias y caracteristicas de 2 de los lenguajes más en auge.">
+<meta property="og:image" content="https://www.imaginarycloud.com/blog/content/images/2021/05/type-vs-javascript.png">
+<meta property="og:description" content="Diferencias y caracteristicas de 2 de los lenguajes que más están en auge.">
 <meta name=twitter:card content="summary">
 <meta name=twitter:site content="@zerostaticio">
 <meta name=twitter:creator content="@zerostaticio">
@@ -52,7 +52,7 @@ Tripa Tech Blog</title>
 <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
 Diferencias entre Javascript y Typescript
 </h1>
-<h2 class="text-xl text-gray-600 mt-2">Diferencias y caracteristicas de 2 de los lenguajes más en auge.</h2>
+<h2 class="text-xl text-gray-600 mt-2">Diferencias y caracteristicas de 2 de los lenguajes que más están en auge.</h2>
 </div>
 <div class="flex flex-col pb-3 md:hidden">
 <div class="flex items-center mb-3 last:mb-0">
@@ -63,7 +63,7 @@ Diferencias entre Javascript y Typescript
 </div>
 </div>
 </div>
-<img width=1600 height=900 src=https://logica7web.es/wp-content/uploads/2022/05/Texto-mecanografiado-vs-JavaScript-Comprenda-la-diferencia-principal-en-detalle.jpg>
+<img width=1600 height=900 src=https://www.imaginarycloud.com/blog/content/images/2021/05/type-vs-javascript.png>
 <div class="flex flex-col md:flex-row py-6 md:py-12">
 <div class="w-full md:w-3/12 pr-3">
 <div class="hidden flex-col md:flex mb-3 md:mb-6">
@@ -76,7 +76,6 @@ Diferencias entre Javascript y Typescript
 </div>
 </div>
 <div class="hidden md:block">
-<a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/lenguajes>Lenguajes</a>
 <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/javascript>Javascript</a>
 <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/typescript>Typescript</a>
 </div>
@@ -84,14 +83,14 @@ Diferencias entre Javascript y Typescript
 <div class="w-full md:w-9/12">
 <div class=prose>
 <h2 id=todos-sabemos-que-es-javascript-pero-qué-es-typescript>Todos sabemos que es Javascript, pero ¿Qué es Typescript?</h2>
-<p>Typescript es un superset de JavaScript. Decimos que una tecnología es un superset de un lenguaje de programación, cuando puede ejecutar programas de la tecnología, Typescript en este caso, y del lenguaje del que es el superset, JavaScript en este mismo ejemplo. En resumen, esto significa que los programas de JavaScript son programas válidos de TypeScript, a pesar de que TypeScript sea otro lenguaje de programación.</p>
+<p>Typescript es una extensión de Javascript. En este sentido, es un lenguaje de programación propio que se basa en Javascript para darnos herramientas de desarrollo en cualquier escala de proyectos. En resumen, esto significa que los programas de JavaScript son programas válidos de TypeScript, a pesar de que TypeScript sea otro lenguaje de programación.</p>
 <p>Es un lenguaje orientado a objetos. Esto quiere decir que tanto el cliente como el servidor tienen acceso a la escritura de código. Además, se trata de un código abierto.</p>
 <p>Por si fuera poco, uno de los beneficios adicionales de esta característica del lenguaje, es que pone a disposición el enorme ecosistema de librerías y frameworks que existen para JavaScript. Con Typescript podemos desarrollas aplicaciones con React, Vue, Angular, etc.</p>
 <p>¿Pero si es un superset de Javascript, se ejecuta Javascript? Sí, Typescript transpila a Javascript. ¿Qué significa esto? Que cuando se ejecuta el código de TS, se convierte a Javascript (con las caracteristicas de Typescript) y allí recién se ejecuta.</p>
 <h2 id=principal-característica>Principal característica</h2>
 <p>La principal característica de Typescript es el tipado estático.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>let</span> <span class=nx>edad</span> <span class=o>:</span> <span class=nx>number</span><span class=p>;</span> <span class=c1>//Asignamos el tipo number para la variable edad
-</span><span class=c1></span><span class=nx>edad</span> <span class=o>=</span> <span class=mi>20</span><span class=p>;</span> <span class=c1>// La variable ahora sólo puede asignar valores del tipo number
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>let</span> <span class=nx>edad</span> <span class=o>:</span> <span class=nx>number</span><span class=p>;</span>   <span class=c1>// Asignamos el tipo &#39;number&#39;
+</span><span class=c1></span><span class=nx>edad</span> <span class=o>=</span> <span class=mi>20</span><span class=p>;</span>           <span class=c1>// Ahora sólo puede asignar valores tipo &#39;number&#39;
 </span></code></pre></div><p>El contraste de estos lenguajes son los de tipado dinámico, como JavaScript, estos lenguajes suelen ser mucho más flexibles, lo que nos permite escribir código menos verboso.</p>
 <p>Por otro lado, los lenguajes de tipado estático se prestan a la implementación de herramientas de desarrollo más avanzadas, como:</p>
 <ul>
@@ -101,6 +100,7 @@ Diferencias entre Javascript y Typescript
 <li>Auto documentación del código</li>
 <li>Mejor análisis para detectar errores</li>
 </ul>
+<p><img src=https://blog.boot.dev/img/800/JavaScript-vs-TypeScript-for-beginners-salary-web-dev-min-1.png alt="TS vs JS"></p>
 <h2 id=qué-es-el-tipado-y-por-qué-lo-usa-typescript>¿Qué es el tipado? ¿Y por qué lo usa Typescript?</h2>
 <p>El tipado se refiere a cómo se declaran los tipos de variables. Estos pueden variar desde tipos simples como number y string hasta estructuras complejas.</p>
 <p>Puedes encontrar dos categorías en los lenguajes de programación: Tipado estático y tipado dinámico.</p>
@@ -108,20 +108,18 @@ Diferencias entre Javascript y Typescript
 <p>JavaScript no admite tipado estático. Typescript sí, y ese esa es su ventaja.</p>
 <h2 id=ventajas-de-utilizar-typescript>Ventajas de utilizar Typescript</h2>
 <ul>
-<li><strong>Un lenguaje intuitivo</strong>: TypeScript es un lenguaje fácil de aprender, si conoces JavaScript. Además, es un lenguaje fácil de leer y redactar.</li>
-<li><strong>Detecta errores a tiempo</strong>: La precisión de TypeScript es ideal. Permite detectar errores de compilación antes de su ejecución, por lo que se trata de un código confiable y con un índice de error muy bajo.</li>
-<li><strong>Facilita el trabajo en equipo</strong>: Al ser multiplataforma, varios desarrolladores pueden trabajar en un mismo proyecto al unísono.</li>
-<li><strong>Genera código estándar</strong>: En este sentido, esto también propicia que los posibles problemas sean menores.</li>
-<li><strong>Escritura estática</strong>: No es un código dinámico, de modo que este tipo de escritura favorece una mejora en la estructura de código y en las técnicas de programación orientadas a objetos.</li>
-<li><strong>Efectividad</strong>: Se pueden emplear las habilidades de JavaScript de una forma más efectiva. Compilado TypeScript, se convierte en un JavaScript más seguro y limpio.</li>
+<li><strong>Robustez:</strong> Aporta muchas herramientas y funciones al desarrollo de Javascript. La robustez viene por parte de su tipado estático y no dinámico como es el caso de JS, ya que te permite determinar interfaces para definir que caracteristicas debe tener un objeto, o de que tipo debe ser una variable por ejemplo.</li>
+<li><strong>Flexibilidad:</strong> Muy usado en la mayoria de proyectos web, ya que hoy en frameworks como React o Vue, se recomienda el uso de Typescript. Pero la flexibilidad viene de que puedes llevar a cabo un proyecto fullstack con el mismo lenguaje, por ejemplo utilizando React con sus archivos &lsquo;.tsx&rsquo; y en el backend utilizar Typescript con Node con sus archivos &lsquo;.ts&rsquo;</li>
+<li><strong>Detección de errores a tiempo:</strong> La precisión de TypeScript es ideal. Permite detectar errores de compilación antes de su ejecución, por lo que se trata de un código confiable y con un índice de error muy bajo.</li>
+<li><strong>Efectividad:</strong> Se pueden emplear las habilidades de JavaScript de una forma más efectiva. Compilado TypeScript, se convierte en un JavaScript más seguro y limpio.</li>
 </ul>
 <h2 id=principales-diferencias-entre-js-y-ts>Principales diferencias entre JS y TS</h2>
 <p>Estas son las principales diferencias entre estos 2 lenguajes:</p>
 <ul>
 <li>TypeScript dispone de una escritura estática, mientras que JavaScript es un lenguaje dinámico.</li>
-<li>JavaScript no admite módulos, mientras que TypeScript sí que les da soporte.</li>
-<li>TypeScript dispone de interfaz, mientras que JavaScript no.</li>
-<li>En TypeScript sí que hay que compilar el código, en JavaScript no es necesario.</li>
+<li>TypeScript dispone de interfaces, mientras que JavaScript no.</li>
+<li>Typescript tiene una verdadera orientación a objetos, principalmente influenciado por Java.</li>
+<li>Los errores en Typescript son en tiempo de escritura, a diferencia de Javascript que es en tiempo de ejecución. En TS te das cuenta de los errores porque te avisan mientras escribes el código, en Javascript nos damos cuenta de los errores cuando ejecutamos el código.</li>
 </ul>
 <h2 id=diferencia-en-código>Diferencia en código</h2>
 <p>Si entraramos en un proyecto y tenemos una funcion que trae datos de una api, no sabemos cuales son los datos que trae esa API salvo que ejecutemos esa función:</p>
@@ -148,7 +146,6 @@ Diferencias entre Javascript y Typescript
 <div class="py-6 mt-6 border-t-2 block md:hidden">
 <h3 class="text-sm font-medium mb-1">Categories</h3>
 <div>
-<a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/lenguajes>Lenguajes</a>
 <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/javascript>Javascript</a>
 <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href=/categories/typescript>Typescript</a>
 </div>
