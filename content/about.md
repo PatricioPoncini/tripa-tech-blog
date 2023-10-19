@@ -7,7 +7,7 @@ image: "/images/about_me.jpg"
 
 # ¡Hola!
 
-Mi nombre es Patricio y soy de San Francisco, Córdoba, Argentina. Soy un desarrollador backend y estudiante de la Tecnicatura Universitaria en Programación. Mis tecnologías favoritas y con las cuales trabajo actualmente son Typescript, Express.js y MySQL. Aunque también tengo un pequeño proyecto en mi trabajo actual en el cual utilizo Vue, un framework que aprendí recientemente y me dejó encantado.
+Mi nombre es Patricio y soy de San Francisco, Córdoba, Argentina. Soy un desarrollador backend y estudiante de la Tecnicatura Universitaria en Programación. Mis tecnologías favoritas son Typescript, Express.js y MySQL.
 
 Este blog es un proyecto personal donde podrás ver posts que hago referidos a tecnología, en los cuales voy a dar lo mejor de mí en cuanto a investigación de los temas que se publiquen, para poder brindar información relevante y atractiva para vos.
 
@@ -19,13 +19,11 @@ Pero tranquilo, no va a ser todo serio. Me gustan tanto los blogs de guías como
 
 Actualmente estoy estudiando la Tecnicatura Universitaria en Programación en la UTN de mi ciudad. Una carrera que me enseñó muchas bases en programación que no pude aprender en secundaria debido a que no asistí a un secundario técnico.
 
-En paralelo, estoy trabajando en una consultora llevando acabo un proyecto fascinante. Entré el 27 de octubre de 2022 y sigo hasta el día de hoy allí, y desde ese momento mi responsabilidad ha sido desarrollar un backend para un software de oficina virtual. ¿El objetivo? poder conectar a clientes y agentes de una forma mucho más sencilla y comunicativa. Comencé sabiendo muy poco dado que fue mi primera experiencia en el mundo laboral, pero hoy en día puedo decir que crecí muchísimo y pude llevar mis habilidades a otro nivel. 
+Al mismo tiempo, estoy trabajando en Legendaryum, una empresa centrada en el desarrollo de metaverso. Comencé mi trayecto en Legendaryum el 19 de septiembre de 2023, y desde entonces no he dejado de absorber nuevos conocimientos. Siendo mi segundo empleo, ya tenía una base sólida, pero unirse a un proyecto tan grande me permitió adentrarme aún más en el desarrollo de software y aprender nuevas tecnologías como Docker, MongoDB entre otras.
 
-En este proyecto las principales tecnologías son Typescript, Express.js, MySQL y TypeORM. Pero además pude tocar temas muy interesantes como cronjobs, envío de emails automáticos, autenticación con jsonwebtokens, recopilación de datos para reportes, entre otros. Por lo que puedo decir que aprendí mucho en este tiempo que llevo trabajando como desarrollador backend.
+Además de fortalecer mis habilidades en el desarrollo backend, también he ampliado mi horizonte en el frontend. Ya tenía experiencia en Vue, pero pude llevar mis habilidades al siguiente nivel diseñando vistas con gráficos, creando mi primer panel de control y trabajando con datos para generar estadísticas.
 
-Como dije, me encuentro desarrollando el backend y tengo un compañero que desarrolla el frontend. Juntos aprendimos y seguimos aprendiendo mucho del otro y nos complementamos, pudiendo asi llevar el proyecto adelante además de alimentar nuestras habilidades técnicas.
-
-Anteriormente te comenté que también utilizo Vue en un pequeño proyecto dentro de la consultora. Desarrollo webs institucionales utilizando el framework de Vue para esto, e interactuando así mismo con el backend que yo mismo construí de la plataforma de oficina virtual.
+En este proyecto, hago uso de una variedad de tecnologías. En el backend, TypeScript encabeza la lista, junto con Node.js y Express, respaldado por MongoDB, Docker, Redis y otras, según las necesidades específicas del proyecto. En el frontend, me baso en Vue y complemento con Tailwind.
 
 ## ¿Cuál es mi objetivo?
 Mi objetivo el día de mañana es poder ser un desarrollador fullstack, y para eso estudio diariamente temas que me parecen interesantes y puedo aplicar en mi trabajo, para poder crecer profesionalmente.
