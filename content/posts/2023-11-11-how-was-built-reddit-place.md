@@ -44,6 +44,19 @@ Basicamente se guardaban las cordenadas en el eje *x* y en el eje *y*, para lueg
 
 Esta propuesta viene porque el tablero contiene 1 millón de baldosas, lo que significa que debería leer 1 millón de columnas. En su cluster de producción eso les tomaría un tiempo de 30 segundos, un tiempo totalmente inaceptablemente lento y que podría ejercer una presión excesiva sobre Cassandra.
 
-El siguiente enfoque fue guardar el muro completo en Redis. Guardaron en formato **[bitfield](https://redis.io/commands/bitfield/)** (campo de bits usado en Redis) de 1 millón de enteros de 4 bits. Cada entero de 4 bits puede codificar un color de 4 bits, y las cordenadas *x* e *y* se determinaban mediante el desplazamiento (offset = x + 1000y) dentro del campo de bits. Con esto podrían leer el estado del muro leyendo el campo de bits completo.
+El siguiente enfoque fue guardar el muro completo en Redis. Guardaron en formato **[bitfield](https://redis.io/commands/bitfield/)** (campo de bits usado en Redis) de 1 millón de enteros de 4 bits. Cada entero de 4 bits puede codificar un color de 4 bits, y las cordenadas *x* e *y* se determinaban mediante el desplazamiento (offset = x + 1000y) dentro del campo de bits. Con esto podrían leer el estado del muro leyendo el campo de bits completo. Esto ademas permite actualizar individualmente baldosas actualizando el valor del campo de bits en un offset específico.
+
+Igualmente todavía necesitaban guardar todos los detalles en Cassandra para que los usuarios puedan inspeccionar las baldosas individuales para ver quien las colocó y cuando. Tenían planeado utilizar Cassandra para restaurar el muro en caso de que Redis falle. Leer el muro entero desde Redis tomaba menos de 100 milisgundos, lo cual era suficientemente rápido.
+
+![How colores were stored in Redis](https://www.redditinc.com/assets/images/blog/_720xAUTO_crop_center-center_none/drawio-1.png)
+*Ilustración de como los colores son guardados en Redis usando un muro de 2x2*
+
+Estaban conscientes de exceder la capacidad máxima de bandaancha en Redis. Si muchos clientes se conectaban o frescaban al mismo tiempo el estado del muro solicitarían muchas lecturas en simultáneo a Redis. La solución fue cachearlo en el CDN porque es simple de implementar y significaba que el cache estaba lo más cerca posible del cliente, lo que ayuda a mejorar la velocidad de respuesta.
+
+Peticiones para el estado completo del muro eran cacheadas por Fastly con expiración de 1 segundo. También comentan que añadieron un control de caché "stale-while-revalidate" para evitar que se generaran más solicitudes de las deseadas cuando la caché del tablero caducaba. Fastly mantiene alrededor de 33 puntos de presencia (POP) que realizan almacenamiento en caché de manera independiente, por lo que esperábamos recibimo como máximo 33 peticiones por segundo para el muro completo.
+
+Para devolver las actualizaciones al cliente utilizaron websockets. Tuvieron éxito usandolo en producción para *reddit live* para más de 100,000 clientes simultáneos con todo lo que ello conlleva.
+
+# API
 
 ## Escribiendo...
