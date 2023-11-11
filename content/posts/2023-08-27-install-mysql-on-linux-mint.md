@@ -4,7 +4,7 @@ date: 2023-08-27
 author: 
   name: "Patricio Poncini"
   image: images/author/author_img.jpg
-categories: ["MySQL", "Linux"]
+categories: ["MySQL", "Linux", "Bases de datos"]
 tags: ["Writing"]
 description: Aprenderas a instalar MySQL en Linux Mint utilizando la bash. Además, crearás tu primera base de datos mediante comandos
 thumbnail: "/images/mysql_install_banner.jpg"
