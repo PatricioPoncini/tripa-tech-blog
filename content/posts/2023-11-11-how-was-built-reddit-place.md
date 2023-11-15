@@ -58,5 +58,24 @@ Peticiones para el estado completo del muro eran cacheadas por Fastly con expira
 Para devolver las actualizaciones al cliente utilizaron websockets. Tuvieron éxito usandolo en producción para *reddit live* para más de 100,000 clientes simultáneos con todo lo que ello conlleva.
 
 # API
+### Traer el muro completo
+![Diagram](https://www.redditinc.com/assets/images/blog/_720xAUTO_crop_center-center_none/board-bitmap.png)
+**Diagrama de peticiones entre el cliente y Reddit*
+
+
+Las peticiones van por [Fastly](https://www.fastly.com/es/). Si hay una copia del muro que no haya expirado, se devolvería inmediatamente sin necesidad de interactuar con los servidores de la aplicación de Reddit. Caso contrario, si no hay una copia válida en caché o si esta está desactualizada, Reddit leería todo el muro desde Redis y devolvería esa información al cliente por Fastly para que la almacene en caché y la devuelva al cliente.
+
+Las peticiones nunca superaban las 33/s, lo que significa que el caché de Fastly funcionaba correctamente y prevenía que la mayoría de peticiones le peguen a la aplicación de Reddit.
+
+Cuando una petición se hacía a la petición de Reddit, esta leí Redis de una manera eficiente y rápida.
+
+![Diagram for draw a tile in the board](https://www.redditinc.com/assets/images/blog/_720xAUTO_crop_center-center_none/draw.png)
+**Guardado de una baldosa*
+
+### Pasos para dibujar una baldosa y guardar esa información
+1. Leer el timestamp del último usuario que "pintó" esa baldosa desde Cassandra. Si es más reciente que el tiempo de espera de 5 minutos, rechaza el intento de interactuar con la baldosa y retorna un error al usuario.
+2. Guarda los datos de la baldosa en Redis y Cassandra
+3. Guarda el timestamp actual y el usuario que realizó la modificación en Cassandra
+4. Avisa al websocket para que le avise a todos los clientes conectados del cambio que hubo
 
 ## Escribiendo...
