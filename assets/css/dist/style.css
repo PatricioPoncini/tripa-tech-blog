@@ -1034,20 +1034,6 @@ video {
   font-style: normal;
 }
 
-.logo h2 strong {
-  margin-bottom: 0.5rem;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #4ade80 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(74 222 128 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  font-weight: inherit;
-  font-style: normal;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
